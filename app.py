@@ -16,7 +16,7 @@ import google.generativeai as genai
 
 
 
-genai.configure(api_key="API-KEY")
+genai.configure(api_key="Api-Key")
 
 ## Function to load OpenAI model and get respones
 
@@ -45,9 +45,9 @@ def input_image_setup(uploaded_file):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="LCD Defect Demo")
+st.set_page_config(page_title="Medical Bot")
 
-st.header("LCD Defect")
+st.header("Medical Bot")
 input=st.text_input("Input Prompt: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 image=""   
@@ -59,8 +59,8 @@ if uploaded_file is not None:
 submit=st.button("Tell me about the image")
 
 input_prompt = """
-               You are an expert in understanding LCD Defects.
-               You will receive input images as defected LCD &
+               You are an expert in medicine and x-ray diesease detection.
+               You will receive input images as X-ray &
                you will have to answer questions based on the input image
                """
 
